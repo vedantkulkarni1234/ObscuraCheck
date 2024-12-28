@@ -19,7 +19,7 @@ A powerful Python tool for analyzing HTTP security headers with detailed reporti
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/obscuracheck.git
+git clone https://github.com/vedantkulkarni1234/ObscuraCheck.git
 
 # Navigate to the project directory
 cd obscuracheck
