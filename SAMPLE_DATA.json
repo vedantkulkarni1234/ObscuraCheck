@@ -1,0 +1,858 @@
+[
+  {
+    "id": "prompt-001",
+    "title": "Code Review Request",
+    "content": "Please review this {{language}} code for {{focus_area}}:\n\n```{{code}}```\n\nProvide specific suggestions for improvement, focusing on:\n- {{focus_area}}\n- Best practices for {{language}}\n- Potential bugs or edge cases\n\nRating: {{difficulty}} difficulty level",
+    "category": "Development",
+    "tags": ["code-review", "programming", "feedback"],
+    "variables": [
+      {
+        "name": "language",
+        "type": "select",
+        "default_value": "Python",
+        "options": ["Python", "JavaScript", "Go", "Rust", "Java", "C++"]
+      },
+      {
+        "name": "focus_area",
+        "type": "text",
+        "default_value": "performance",
+        "options": null
+      },
+      {
+        "name": "code",
+        "type": "textarea",
+        "default_value": "",
+        "options": null
+      },
+      {
+        "name": "difficulty",
+        "type": "select",
+        "default_value": "beginner",
+        "options": ["beginner", "intermediate", "advanced", "expert"]
+      }
+    ],
+    "is_favorite": true,
+    "created_at": "2025-01-15T10:30:00Z",
+    "updated_at": "2025-01-15T10:30:00Z",
+    "use_count": 12
+  },
+  {
+    "id": "prompt-002",
+    "title": "Blog Post Outline Generator",
+    "content": "Create a detailed blog post outline for:\n\nTopic: {{topic}}\nTarget Audience: {{audience}}\nTone: {{tone}}\nWord Count Goal: {{word_count}} words\n\nStructure:\n1. Introduction hook\n2. Problem statement\n3. {{num_sections}} main sections\n4. Conclusion with call-to-action\n5. Key takeaways\n\nEnsure SEO optimization for keywords: {{keywords}}",
+    "category": "Writing",
+    "tags": ["blog", "content-creation", "outline", "writing"],
+    "variables": [
+      {
+        "name": "topic",
+        "type": "text",
+        "default_value": "AI trends in 2025",
+        "options": null
+      },
+      {
+        "name": "audience",
+        "type": "text",
+        "default_value": "tech professionals",
+        "options": null
+      },
+      {
+        "name": "tone",
+        "type": "select",
+        "default_value": "professional",
+        "options": ["professional", "casual", "humorous", "academic", "conversational"]
+      },
+      {
+        "name": "word_count",
+        "type": "number",
+        "default_value": "2000",
+        "options": null
+      },
+      {
+        "name": "num_sections",
+        "type": "number",
+        "default_value": "5",
+        "options": null
+      },
+      {
+        "name": "keywords",
+        "type": "text",
+        "default_value": "AI, machine learning, future",
+        "options": null
+      }
+    ],
+    "is_favorite": true,
+    "created_at": "2025-01-14T14:22:00Z",
+    "updated_at": "2025-01-14T14:22:00Z",
+    "use_count": 8
+  },
+  {
+    "id": "prompt-003",
+    "title": "Data Analysis Framework",
+    "content": "Analyze the following {{data_type}} data:\n\nDataset: {{dataset_name}}\nTime Period: {{time_period}}\nMetrics to Analyze: {{metrics}}\nComparison Group: {{comparison}}\n\nProvide:\n1. Summary statistics\n2. Trend analysis\n3. Anomalies detected\n4. Key insights\n5. Recommended actions\n6. Confidence level: {{confidence}}",
+    "category": "Analysis",
+    "tags": ["analysis", "data", "insights", "metrics"],
+    "variables": [
+      {
+        "name": "data_type",
+        "type": "select",
+        "default_value": "sales",
+        "options": ["sales", "traffic", "user-behavior", "financial", "operational"]
+      },
+      {
+        "name": "dataset_name",
+        "type": "text",
+        "default_value": "Q1 2025 Sales Data",
+        "options": null
+      },
+      {
+        "name": "time_period",
+        "type": "text",
+        "default_value": "January - March 2025",
+        "options": null
+      },
+      {
+        "name": "metrics",
+        "type": "textarea",
+        "default_value": "Total revenue, conversion rate, customer acquisition cost",
+        "options": null
+      },
+      {
+        "name": "comparison",
+        "type": "text",
+        "default_value": "Q1 2024",
+        "options": null
+      },
+      {
+        "name": "confidence",
+        "type": "select",
+        "default_value": "high",
+        "options": ["low", "medium", "high", "very-high"]
+      }
+    ],
+    "is_favorite": false,
+    "created_at": "2025-01-13T09:15:00Z",
+    "updated_at": "2025-01-13T09:15:00Z",
+    "use_count": 5
+  },
+  {
+    "id": "prompt-004",
+    "title": "Email Campaign Brief",
+    "content": "Create an email campaign brief for:\n\nCampaign Name: {{campaign_name}}\nGoal: {{campaign_goal}}\nTarget Segment: {{target_segment}}\nProduct/Service: {{product}}\nKey Benefit: {{benefit}}\nCall-to-Action: {{cta}}\nSend Date: {{send_date}}\n\nRequirements:\n- Subject line: {{subject_line}}\n- Estimated open rate: {{open_rate}}%\n- Expected conversion: {{conversion}}%\n- Follow-up sequence: {{followup_sequence}}",
+    "category": "Marketing",
+    "tags": ["email", "marketing", "campaign", "copywriting"],
+    "variables": [
+      {
+        "name": "campaign_name",
+        "type": "text",
+        "default_value": "Spring Sale 2025",
+        "options": null
+      },
+      {
+        "name": "campaign_goal",
+        "type": "select",
+        "default_value": "increase-sales",
+        "options": ["increase-sales", "lead-generation", "user-retention", "awareness", "re-engagement"]
+      },
+      {
+        "name": "target_segment",
+        "type": "text",
+        "default_value": "inactive users",
+        "options": null
+      },
+      {
+        "name": "product",
+        "type": "text",
+        "default_value": "Premium Plan",
+        "options": null
+      },
+      {
+        "name": "benefit",
+        "type": "text",
+        "default_value": "Save 30% and unlock premium features",
+        "options": null
+      },
+      {
+        "name": "cta",
+        "type": "text",
+        "default_value": "Upgrade Now",
+        "options": null
+      },
+      {
+        "name": "send_date",
+        "type": "text",
+        "default_value": "2025-03-01",
+        "options": null
+      },
+      {
+        "name": "subject_line",
+        "type": "text",
+        "default_value": "Your exclusive 30% offer expires soon",
+        "options": null
+      },
+      {
+        "name": "open_rate",
+        "type": "number",
+        "default_value": "25",
+        "options": null
+      },
+      {
+        "name": "conversion",
+        "type": "number",
+        "default_value": "5",
+        "options": null
+      },
+      {
+        "name": "followup_sequence",
+        "type": "select",
+        "default_value": "3-day",
+        "options": ["none", "24-hour", "3-day", "weekly"]
+      }
+    ],
+    "is_favorite": false,
+    "created_at": "2025-01-12T11:45:00Z",
+    "updated_at": "2025-01-12T11:45:00Z",
+    "use_count": 3
+  },
+  {
+    "id": "prompt-005",
+    "title": "Meeting Minutes Template",
+    "content": "Meeting Minutes\n\nDate: {{meeting_date}}\nTime: {{meeting_time}}\nLocation: {{location}}\nAttendees: {{attendees}}\nAbsentees: {{absentees}}\n\nAgenda Items:\n{{agenda}}\n\nKey Decisions:\n1. {{decision_1}}\n2. {{decision_2}}\n3. {{decision_3}}\n\nAction Items:\n- {{action_1}} (Owner: {{owner_1}}, Due: {{due_1}})\n- {{action_2}} (Owner: {{owner_2}}, Due: {{due_2}})\n\nNext Meeting: {{next_meeting_date}} at {{next_meeting_time}}\n\nNotes: {{additional_notes}}",
+    "category": "General",
+    "tags": ["meeting", "documentation", "template", "business"],
+    "variables": [
+      {
+        "name": "meeting_date",
+        "type": "text",
+        "default_value": "2025-01-15",
+        "options": null
+      },
+      {
+        "name": "meeting_time",
+        "type": "text",
+        "default_value": "2:00 PM",
+        "options": null
+      },
+      {
+        "name": "location",
+        "type": "text",
+        "default_value": "Conference Room A",
+        "options": null
+      },
+      {
+        "name": "attendees",
+        "type": "textarea",
+        "default_value": "John Smith, Jane Doe, Bob Johnson",
+        "options": null
+      },
+      {
+        "name": "absentees",
+        "type": "text",
+        "default_value": "None",
+        "options": null
+      },
+      {
+        "name": "agenda",
+        "type": "textarea",
+        "default_value": "1. Project status update\n2. Budget review\n3. Team feedback",
+        "options": null
+      },
+      {
+        "name": "decision_1",
+        "type": "text",
+        "default_value": "Approved Q2 budget",
+        "options": null
+      },
+      {
+        "name": "decision_2",
+        "type": "text",
+        "default_value": "Delayed launch to March",
+        "options": null
+      },
+      {
+        "name": "decision_3",
+        "type": "text",
+        "default_value": "Assigned tech lead",
+        "options": null
+      },
+      {
+        "name": "action_1",
+        "type": "text",
+        "default_value": "Prepare financial report",
+        "options": null
+      },
+      {
+        "name": "owner_1",
+        "type": "text",
+        "default_value": "Finance team",
+        "options": null
+      },
+      {
+        "name": "due_1",
+        "type": "text",
+        "default_value": "2025-01-20",
+        "options": null
+      },
+      {
+        "name": "action_2",
+        "type": "text",
+        "default_value": "Update project roadmap",
+        "options": null
+      },
+      {
+        "name": "owner_2",
+        "type": "text",
+        "default_value": "Project manager",
+        "options": null
+      },
+      {
+        "name": "due_2",
+        "type": "text",
+        "default_value": "2025-01-18",
+        "options": null
+      },
+      {
+        "name": "next_meeting_date",
+        "type": "text",
+        "default_value": "2025-01-22",
+        "options": null
+      },
+      {
+        "name": "next_meeting_time",
+        "type": "text",
+        "default_value": "2:00 PM",
+        "options": null
+      },
+      {
+        "name": "additional_notes",
+        "type": "textarea",
+        "default_value": "Great discussion. Team morale is high.",
+        "options": null
+      }
+    ],
+    "is_favorite": false,
+    "created_at": "2025-01-10T16:20:00Z",
+    "updated_at": "2025-01-10T16:20:00Z",
+    "use_count": 2
+  },
+  {
+    "id": "prompt-006",
+    "title": "Social Media Post Brief",
+    "content": "Social Media Post\n\nPlatform: {{platform}}\nContent Type: {{content_type}}\nTarget Audience: {{audience}}\nKey Message: {{message}}\nHashtags: {{hashtags}}\nCall-to-Action: {{cta}}\nBest Time to Post: {{post_time}}\n\nPost Body:\n{{post_body}}\n\nEngagement Goal: {{engagement_target}}\nExpected Reach: {{reach_estimate}}\n\nVisual Elements: {{visual_notes}}",
+    "category": "Marketing",
+    "tags": ["social-media", "marketing", "copywriting", "engagement"],
+    "variables": [
+      {
+        "name": "platform",
+        "type": "select",
+        "default_value": "Twitter",
+        "options": ["Twitter", "LinkedIn", "Instagram", "Facebook", "TikTok", "Threads"]
+      },
+      {
+        "name": "content_type",
+        "type": "select",
+        "default_value": "update",
+        "options": ["update", "educational", "promotional", "entertaining", "behind-the-scenes"]
+      },
+      {
+        "name": "audience",
+        "type": "text",
+        "default_value": "tech professionals",
+        "options": null
+      },
+      {
+        "name": "message",
+        "type": "text",
+        "default_value": "New feature launched",
+        "options": null
+      },
+      {
+        "name": "hashtags",
+        "type": "text",
+        "default_value": "#tech #launch #innovation",
+        "options": null
+      },
+      {
+        "name": "cta",
+        "type": "text",
+        "default_value": "Check it out now →",
+        "options": null
+      },
+      {
+        "name": "post_time",
+        "type": "text",
+        "default_value": "2:00 PM EST",
+        "options": null
+      },
+      {
+        "name": "post_body",
+        "type": "textarea",
+        "default_value": "We're excited to announce...",
+        "options": null
+      },
+      {
+        "name": "engagement_target",
+        "type": "number",
+        "default_value": "500",
+        "options": null
+      },
+      {
+        "name": "reach_estimate",
+        "type": "text",
+        "default_value": "10K-50K",
+        "options": null
+      },
+      {
+        "name": "visual_notes",
+        "type": "text",
+        "default_value": "Feature screenshot, brand colors",
+        "options": null
+      }
+    ],
+    "is_favorite": false,
+    "created_at": "2025-01-11T13:10:00Z",
+    "updated_at": "2025-01-11T13:10:00Z",
+    "use_count": 4
+  },
+  {
+    "id": "prompt-007",
+    "title": "Bug Report Template",
+    "content": "Bug Report\n\nTitle: {{bug_title}}\nSeverity: {{severity}}\nStatus: {{status}}\nReported by: {{reporter}}\nAssigned to: {{assigned_to}}\nDate Reported: {{report_date}}\n\nDescription:\n{{bug_description}}\n\nSteps to Reproduce:\n1. {{step_1}}\n2. {{step_2}}\n3. {{step_3}}\n\nExpected Behavior:\n{{expected_behavior}}\n\nActual Behavior:\n{{actual_behavior}}\n\nEnvironment:\n- Browser/Version: {{browser}}\n- OS: {{os}}\n- Device: {{device}}\n\nAttachments: {{attachments}}\n\nNotes: {{notes}}",
+    "category": "Development",
+    "tags": ["bug", "testing", "qa", "issue-tracking"],
+    "variables": [
+      {
+        "name": "bug_title",
+        "type": "text",
+        "default_value": "Login button not responding",
+        "options": null
+      },
+      {
+        "name": "severity",
+        "type": "select",
+        "default_value": "high",
+        "options": ["low", "medium", "high", "critical"]
+      },
+      {
+        "name": "status",
+        "type": "select",
+        "default_value": "open",
+        "options": ["open", "in-progress", "resolved", "closed", "on-hold"]
+      },
+      {
+        "name": "reporter",
+        "type": "text",
+        "default_value": "QA Team",
+        "options": null
+      },
+      {
+        "name": "assigned_to",
+        "type": "text",
+        "default_value": "Developer Name",
+        "options": null
+      },
+      {
+        "name": "report_date",
+        "type": "text",
+        "default_value": "2025-01-15",
+        "options": null
+      },
+      {
+        "name": "bug_description",
+        "type": "textarea",
+        "default_value": "The login button freezes when clicked",
+        "options": null
+      },
+      {
+        "name": "step_1",
+        "type": "text",
+        "default_value": "Navigate to login page",
+        "options": null
+      },
+      {
+        "name": "step_2",
+        "type": "text",
+        "default_value": "Enter credentials",
+        "options": null
+      },
+      {
+        "name": "step_3",
+        "type": "text",
+        "default_value": "Click login button",
+        "options": null
+      },
+      {
+        "name": "expected_behavior",
+        "type": "text",
+        "default_value": "User should be logged in",
+        "options": null
+      },
+      {
+        "name": "actual_behavior",
+        "type": "text",
+        "default_value": "Button becomes unresponsive",
+        "options": null
+      },
+      {
+        "name": "browser",
+        "type": "text",
+        "default_value": "Chrome 120",
+        "options": null
+      },
+      {
+        "name": "os",
+        "type": "select",
+        "default_value": "macOS",
+        "options": ["Windows", "macOS", "Linux"]
+      },
+      {
+        "name": "device",
+        "type": "select",
+        "default_value": "desktop",
+        "options": ["desktop", "tablet", "mobile"]
+      },
+      {
+        "name": "attachments",
+        "type": "text",
+        "default_value": "screenshot.png, error.log",
+        "options": null
+      },
+      {
+        "name": "notes",
+        "type": "textarea",
+        "default_value": "Occurs consistently in private browsing mode",
+        "options": null
+      }
+    ],
+    "is_favorite": false,
+    "created_at": "2025-01-09T10:05:00Z",
+    "updated_at": "2025-01-09T10:05:00Z",
+    "use_count": 1
+  },
+  {
+    "id": "prompt-008",
+    "title": "Product Feature Spec",
+    "content": "Feature Specification\n\nFeature Name: {{feature_name}}\nEpic: {{epic}}\nVersion: {{version}}\nPriority: {{priority}}\nEstimated Effort: {{effort_estimate}}\nOwner: {{owner}}\n\nObjective:\n{{objective}}\n\nUser Story:\nAs a {{user_type}}, I want to {{user_need}}, so that {{benefit}}\n\nAcceptance Criteria:\n- {{criteria_1}}\n- {{criteria_2}}\n- {{criteria_3}}\n\nTechnical Requirements:\n{{tech_requirements}}\n\nDependencies: {{dependencies}}\n\nRisks & Mitigations:\n{{risks}}\n\nDesign Notes: {{design_notes}}",
+    "category": "Development",
+    "tags": ["product", "specification", "planning", "development"],
+    "variables": [
+      {
+        "name": "feature_name",
+        "type": "text",
+        "default_value": "Dark mode toggle",
+        "options": null
+      },
+      {
+        "name": "epic",
+        "type": "text",
+        "default_value": "UX Improvements",
+        "options": null
+      },
+      {
+        "name": "version",
+        "type": "text",
+        "default_value": "2.5.0",
+        "options": null
+      },
+      {
+        "name": "priority",
+        "type": "select",
+        "default_value": "medium",
+        "options": ["low", "medium", "high", "critical"]
+      },
+      {
+        "name": "effort_estimate",
+        "type": "select",
+        "default_value": "8-points",
+        "options": ["3-points", "5-points", "8-points", "13-points", "21-points"]
+      },
+      {
+        "name": "owner",
+        "type": "text",
+        "default_value": "Product Manager",
+        "options": null
+      },
+      {
+        "name": "objective",
+        "type": "textarea",
+        "default_value": "Allow users to switch between light and dark themes",
+        "options": null
+      },
+      {
+        "name": "user_type",
+        "type": "text",
+        "default_value": "power user",
+        "options": null
+      },
+      {
+        "name": "user_need",
+        "type": "text",
+        "default_value": "toggle dark mode",
+        "options": null
+      },
+      {
+        "name": "benefit",
+        "type": "text",
+        "default_value": "I can comfortably use the app at night",
+        "options": null
+      },
+      {
+        "name": "criteria_1",
+        "type": "text",
+        "default_value": "Toggle appears in settings",
+        "options": null
+      },
+      {
+        "name": "criteria_2",
+        "type": "text",
+        "default_value": "Theme persists across sessions",
+        "options": null
+      },
+      {
+        "name": "criteria_3",
+        "type": "text",
+        "default_value": "Smooth transition animation",
+        "options": null
+      },
+      {
+        "name": "tech_requirements",
+        "type": "textarea",
+        "default_value": "CSS variables, localStorage API, smooth transitions",
+        "options": null
+      },
+      {
+        "name": "dependencies",
+        "type": "text",
+        "default_value": "Design system finalized",
+        "options": null
+      },
+      {
+        "name": "risks",
+        "type": "textarea",
+        "default_value": "Browser compatibility with CSS variables",
+        "options": null
+      },
+      {
+        "name": "design_notes",
+        "type": "textarea",
+        "default_value": "Use color tokens for theme switching",
+        "options": null
+      }
+    ],
+    "is_favorite": false,
+    "created_at": "2025-01-08T14:30:00Z",
+    "updated_at": "2025-01-08T14:30:00Z",
+    "use_count": 0
+  },
+  {
+    "id": "prompt-009",
+    "title": "Customer Support Response Template",
+    "content": "Support Response\n\nTicket ID: {{ticket_id}}\nCustomer: {{customer_name}}\nIssue Category: {{category}}\nUrgency: {{urgency}}\nResponse Time: {{response_time}}\n\nDear {{customer_name}},\n\nThank you for reaching out regarding {{issue_summary}}.\n\nWe understand your concern about {{concern_details}}.\n\nTo resolve this, please try the following:\n1. {{solution_step_1}}\n2. {{solution_step_2}}\n3. {{solution_step_3}}\n\nIf the issue persists:\n{{escalation_path}}\n\nAdditional Resources:\n{{resources}}\n\nWe appreciate your patience and will follow up within {{followup_time}}.\n\nBest regards,\n{{support_agent_name}}\nCustomer Support Team",
+    "category": "Writing",
+    "tags": ["customer-support", "template", "communication", "help"],
+    "variables": [
+      {
+        "name": "ticket_id",
+        "type": "text",
+        "default_value": "TK-12345",
+        "options": null
+      },
+      {
+        "name": "customer_name",
+        "type": "text",
+        "default_value": "John Smith",
+        "options": null
+      },
+      {
+        "name": "category",
+        "type": "select",
+        "default_value": "technical",
+        "options": ["technical", "billing", "account", "general", "feature-request"]
+      },
+      {
+        "name": "urgency",
+        "type": "select",
+        "default_value": "normal",
+        "options": ["low", "normal", "high", "critical"]
+      },
+      {
+        "name": "response_time",
+        "type": "text",
+        "default_value": "2025-01-15 10:30",
+        "options": null
+      },
+      {
+        "name": "issue_summary",
+        "type": "text",
+        "default_value": "login issues",
+        "options": null
+      },
+      {
+        "name": "concern_details",
+        "type": "textarea",
+        "default_value": "Unable to access account",
+        "options": null
+      },
+      {
+        "name": "solution_step_1",
+        "type": "text",
+        "default_value": "Clear browser cache",
+        "options": null
+      },
+      {
+        "name": "solution_step_2",
+        "type": "text",
+        "default_value": "Try incognito mode",
+        "options": null
+      },
+      {
+        "name": "solution_step_3",
+        "type": "text",
+        "default_value": "Reset password",
+        "options": null
+      },
+      {
+        "name": "escalation_path",
+        "type": "textarea",
+        "default_value": "Contact senior support at support@company.com",
+        "options": null
+      },
+      {
+        "name": "resources",
+        "type": "textarea",
+        "default_value": "Help article: https://help.company.com/login\nVideo tutorial: https://...",
+        "options": null
+      },
+      {
+        "name": "followup_time",
+        "type": "text",
+        "default_value": "24 hours",
+        "options": null
+      },
+      {
+        "name": "support_agent_name",
+        "type": "text",
+        "default_value": "Sarah Johnson",
+        "options": null
+      }
+    ],
+    "is_favorite": true,
+    "created_at": "2025-01-07T11:15:00Z",
+    "updated_at": "2025-01-07T11:15:00Z",
+    "use_count": 6
+  },
+  {
+    "id": "prompt-010",
+    "title": "Interview Question Generator",
+    "content": "Technical Interview Question\n\nRole: {{role}}\nLevel: {{level}}\nTopic: {{topic}}\nDifficulty: {{difficulty}}\nTime Limit: {{time_limit}}\n\nQuestion:\n{{question}}\n\nExpected Skills:\n- {{skill_1}}\n- {{skill_2}}\n- {{skill_3}}\n\nSample Solutions:\n{{sample_solution}}\n\nEvaluation Criteria:\n1. Correctness: {{correctness_weight}}%\n2. Code Quality: {{quality_weight}}%\n3. Explanation: {{explanation_weight}}%\n4. Edge Cases: {{edge_cases_weight}}%\n\nFollow-up Questions:\n- {{followup_1}}\n- {{followup_2}}\n\nCommon Mistakes: {{common_mistakes}}",
+    "category": "Development",
+    "tags": ["interview", "hiring", "technical", "assessment"],
+    "variables": [
+      {
+        "name": "role",
+        "type": "text",
+        "default_value": "Backend Engineer",
+        "options": null
+      },
+      {
+        "name": "level",
+        "type": "select",
+        "default_value": "mid-level",
+        "options": ["entry-level", "mid-level", "senior", "lead"]
+      },
+      {
+        "name": "topic",
+        "type": "select",
+        "default_value": "algorithms",
+        "options": ["algorithms", "data-structures", "system-design", "databases", "api-design"]
+      },
+      {
+        "name": "difficulty",
+        "type": "select",
+        "default_value": "medium",
+        "options": ["easy", "medium", "hard", "very-hard"]
+      },
+      {
+        "name": "time_limit",
+        "type": "text",
+        "default_value": "45 minutes",
+        "options": null
+      },
+      {
+        "name": "question",
+        "type": "textarea",
+        "default_value": "Implement a function to reverse a linked list",
+        "options": null
+      },
+      {
+        "name": "skill_1",
+        "type": "text",
+        "default_value": "Linked list manipulation",
+        "options": null
+      },
+      {
+        "name": "skill_2",
+        "type": "text",
+        "default_value": "Recursion",
+        "options": null
+      },
+      {
+        "name": "skill_3",
+        "type": "text",
+        "default_value": "Time/space complexity analysis",
+        "options": null
+      },
+      {
+        "name": "sample_solution",
+        "type": "textarea",
+        "default_value": "def reverse_linked_list(head):\n    prev = None\n    current = head\n    while current:\n        next_node = current.next\n        current.next = prev\n        prev = current\n        current = next_node\n    return prev",
+        "options": null
+      },
+      {
+        "name": "correctness_weight",
+        "type": "number",
+        "default_value": "40",
+        "options": null
+      },
+      {
+        "name": "quality_weight",
+        "type": "number",
+        "default_value": "30",
+        "options": null
+      },
+      {
+        "name": "explanation_weight",
+        "type": "number",
+        "default_value": "20",
+        "options": null
+      },
+      {
+        "name": "edge_cases_weight",
+        "type": "number",
+        "default_value": "10",
+        "options": null
+      },
+      {
+        "name": "followup_1",
+        "type": "text",
+        "default_value": "How would you do this recursively?",
+        "options": null
+      },
+      {
+        "name": "followup_2",
+        "type": "text",
+        "default_value": "What's the space complexity?",
+        "options": null
+      },
+      {
+        "name": "common_mistakes",
+        "type": "textarea",
+        "default_value": "Not handling null pointer, infinite loop, off-by-one errors",
+        "options": null
+      }
+    ],
+    "is_favorite": false,
+    "created_at": "2025-01-06T15:45:00Z",
+    "updated_at": "2025-01-06T15:45:00Z",
+    "use_count": 2
+  }
+]
