@@ -57,10 +57,15 @@ def render_sidebar() -> None:
 
         col1, col2 = st.columns(2)
         with col1:
+            if st.button("🌌 Galaxy", use_container_width=True):
+                st.switch_page("pages/5_🌌_Prompt_Galaxy.py")
+
+        with col2:
             if st.button("⚙️ Settings", use_container_width=True):
                 st.switch_page("pages/4_⚙️_Settings.py")
 
-        with col2:
+        col1, col2 = st.columns(2)
+        with col1:
             if st.button("❓ Help", use_container_width=True):
                 render_help_modal()
 
