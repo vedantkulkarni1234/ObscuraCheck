@@ -61,13 +61,17 @@ def render_sidebar() -> None:
                 st.switch_page("pages/5_🌌_Prompt_Galaxy.py")
 
         with col2:
-            if st.button("⚙️ Settings", use_container_width=True):
-                st.switch_page("pages/4_⚙️_Settings.py")
-
+            if st.button("🎬 Studio", use_container_width=True):
+                st.switch_page("pages/6_🎬_Studio.py")
+        
         col1, col2 = st.columns(2)
         with col1:
             if st.button("❓ Help", use_container_width=True):
                 render_help_modal()
+        
+        with col2:
+            if st.button("⚙️ Settings", use_container_width=True):
+                st.switch_page("pages/4_⚙️_Settings.py")
 
         st.markdown("---")
 
@@ -110,6 +114,14 @@ def render_help_modal() -> None:
         - ⭐ Favorites
         - 📥 Import/Export JSON
         - 🎨 Light/Dark theme
+        - 🎬 **Live Studio** - Real-time split-screen editor with instant variable preview
+
+        **🎬 Live Studio:**
+        A dedicated editor with split-pane interface where you can:
+        - Edit prompts with syntax highlighting (left pane)
+        - See real-time preview with variables substituted (right pane)
+        - Variables update instantly as you type
+        - Copy previews or full output with one click
 
         **Need Help?**
         Check the settings page for more options and documentation.

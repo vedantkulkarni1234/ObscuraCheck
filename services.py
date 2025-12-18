@@ -91,6 +91,44 @@ class VariableParser:
 
         return result
 
+    @staticmethod
+    def get_missing_variables(content: str, values: Dict[str, str]) -> List[str]:
+        """
+        Get list of variables that have empty/missing values
+        
+        Args:
+            content: Prompt content with variables
+            values: Dictionary of variable_name -> value
+            
+        Returns:
+            List of variable names with missing/empty values
+        """
+        extracted_vars = VariableParser.extract_variables(content)
+        missing = []
+        for var_name in extracted_vars:
+            if not values.get(var_name, "").strip():
+                missing.append(var_name)
+        return missing
+
+    @staticmethod
+    def generate_live_preview(
+        content: str, values: Dict[str, str], show_missing: bool = True
+    ) -> Tuple[str, List[str]]:
+        """
+        Generate live preview with variable substitution
+        
+        Args:
+            content: Prompt content with variables
+            values: Dictionary of variable_name -> value
+            show_missing: Whether to highlight missing variables
+            
+        Returns:
+            (preview_text, list_of_missing_variables)
+        """
+        missing = VariableParser.get_missing_variables(content, values)
+        preview = VariableParser.substitute_variables(content, values)
+        return preview, missing
+
 
 # ============================================================================
 # PROMPT SERVICE
