@@ -39,6 +39,8 @@ class ThemeMode(str, Enum):
     LIGHT = "light"
     DARK = "dark"
     AUTO = "auto"
+    GLASSMORPHISM = "glassmorphism"
+    NEON = "neon"
 
 
 # Light Theme Colors
@@ -101,6 +103,68 @@ DARK_THEME: Dict[str, str] = {
     # Neutral
     "border": "#374151",
     "divider": "#4B5563",
+}
+
+# Glassmorphism Theme Colors (Modern frosted glass aesthetic)
+GLASSMORPHISM_THEME: Dict[str, str] = {
+    # Primary
+    "primary": "#06B6D4",
+    "primary_hover": "#0891B2",
+    "primary_light": "#06B6D4",
+    # Secondary
+    "secondary": "#8B5CF6",
+    "secondary_hover": "#7C3AED",
+    "secondary_light": "#8B5CF6",
+    # Accent
+    "accent": "#EC4899",
+    "accent_light": "#EC4899",
+    # Background (Deep dark for contrast with glass)
+    "bg_primary": "#0F172A",
+    "bg_secondary": "rgba(15, 23, 42, 0.7)",
+    "bg_tertiary": "rgba(30, 41, 59, 0.5)",
+    # Text
+    "text_primary": "#F1F5F9",
+    "text_secondary": "#CBD5E1",
+    "text_tertiary": "#94A3B8",
+    # Status
+    "success": "#10B981",
+    "warning": "#F59E0B",
+    "danger": "#EF4444",
+    "info": "#06B6D4",
+    # Neutral
+    "border": "rgba(148, 163, 184, 0.3)",
+    "divider": "rgba(148, 163, 184, 0.2)",
+}
+
+# Neon Theme Colors (High contrast with glowing accents)
+NEON_THEME: Dict[str, str] = {
+    # Primary (Neon cyan)
+    "primary": "#00FFFF",
+    "primary_hover": "#00E5E5",
+    "primary_light": "#00FFFF",
+    # Secondary (Neon purple)
+    "secondary": "#FF00FF",
+    "secondary_hover": "#E500E5",
+    "secondary_light": "#FF00FF",
+    # Accent (Neon pink)
+    "accent": "#FF0080",
+    "accent_light": "#FF0080",
+    # Background (Dark for neon contrast)
+    "bg_primary": "#0A0E27",
+    "bg_secondary": "#1A1F3A",
+    "bg_tertiary": "#2A2F4A",
+    # Text
+    "text_primary": "#FFFFFF",
+    "text_secondary": "#E0E0FF",
+    "text_tertiary": "#A0A0FF",
+    # Status
+    "success": "#00FF41",
+    "warning": "#FFFF00",
+    "danger": "#FF0041",
+    "info": "#00FFFF",
+    # Neutral
+    "border": "#FF00FF",
+    "divider": "#00FFFF",
 }
 
 # ============================================================================
