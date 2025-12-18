@@ -1,5 +1,5 @@
 """
-Prompt Manager - Theming and CSS Injection
+Prompt Manager - Theming and CSS Injection with Glassmorphism & Neon Themes
 """
 
 from typing import Dict
@@ -7,6 +7,8 @@ from typing import Dict
 from config import (
     LIGHT_THEME,
     DARK_THEME,
+    GLASSMORPHISM_THEME,
+    NEON_THEME,
     FONT_FAMILY,
     SPACING,
     BORDER_RADIUS,
@@ -180,6 +182,167 @@ def get_base_css() -> str:
     
     ::-webkit-scrollbar-thumb:hover {
         background: var(--color-text-secondary);
+    }
+    """
+
+
+def get_glassmorphism_css() -> str:
+    """Get CSS for glassmorphism theme with animated gradients and glow effects"""
+    return """
+    /* Glassmorphism Background - Animated gradient mesh */
+    body {
+        background: linear-gradient(-45deg, #0F172A, #1E293B, #0F172A, #1E293B);
+        background-size: 400% 400%;
+        animation: gradient-shift 15s ease infinite;
+    }
+    
+    @keyframes gradient-shift {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+    
+    /* Glassmorphism Cards - Translucent frosted glass effect */
+    .card, .stContainer {
+        background: rgba(30, 41, 59, 0.4) !important;
+        backdrop-filter: blur(10px) !important;
+        -webkit-backdrop-filter: blur(10px) !important;
+        border: 1px solid rgba(148, 163, 184, 0.3) !important;
+        border-radius: var(--radius-lg) !important;
+        padding: var(--space-lg) !important;
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37) !important;
+        transition: all 0.3s ease !important;
+    }
+    
+    .card:hover, .stContainer:hover {
+        background: rgba(30, 41, 59, 0.5) !important;
+        border-color: rgba(6, 182, 212, 0.5) !important;
+        box-shadow: 0 8px 32px 0 rgba(6, 182, 212, 0.2) !important;
+    }
+    
+    /* Neon Glow Effects on Inputs and Buttons */
+    .stTextInput > div > div > input:focus,
+    .stTextArea > div > div > textarea:focus,
+    .stSelectbox > div > div > select:focus,
+    .stNumberInput > div > div > input:focus {
+        box-shadow: 0 0 20px rgba(6, 182, 212, 0.5), 
+                    0 0 40px rgba(6, 182, 212, 0.3) !important;
+        border-color: #06B6D4 !important;
+    }
+    
+    .stButton > button:hover {
+        box-shadow: 0 0 20px rgba(6, 182, 212, 0.6),
+                    0 0 40px rgba(6, 182, 212, 0.3) !important;
+        transform: translateY(-2px) !important;
+    }
+    
+    /* Glassmorphic Expanders */
+    .streamlit-expanderHeader {
+        background: rgba(30, 41, 59, 0.3) !important;
+        backdrop-filter: blur(8px) !important;
+        border: 1px solid rgba(148, 163, 184, 0.2) !important;
+    }
+    
+    /* Glassmorphic Input Fields */
+    .stTextInput > div > div > input,
+    .stTextArea > div > div > textarea,
+    .stSelectbox > div > div > select,
+    .stNumberInput > div > div > input {
+        background: rgba(15, 23, 42, 0.6) !important;
+        backdrop-filter: blur(8px) !important;
+        border: 1px solid rgba(148, 163, 184, 0.2) !important;
+        color: #F1F5F9 !important;
+        transition: all 0.2s ease !important;
+    }
+    """
+
+
+def get_neon_css() -> str:
+    """Get CSS for neon theme with high-contrast glowing accents"""
+    return """
+    /* Neon Background */
+    body {
+        background: #0A0E27 !important;
+        background-image: 
+            radial-gradient(circle at 20% 50%, rgba(0, 255, 255, 0.05) 0%, transparent 50%),
+            radial-gradient(circle at 80% 80%, rgba(255, 0, 255, 0.05) 0%, transparent 50%);
+        background-attachment: fixed;
+    }
+    
+    /* Neon Cards */
+    .card, .stContainer {
+        background: #1A1F3A !important;
+        border: 2px solid #FF00FF !important;
+        border-radius: var(--radius-lg) !important;
+        padding: var(--space-lg) !important;
+        box-shadow: 0 0 20px rgba(255, 0, 255, 0.3),
+                    inset 0 0 20px rgba(0, 255, 255, 0.1) !important;
+        transition: all 0.3s ease !important;
+    }
+    
+    .card:hover, .stContainer:hover {
+        border-color: #00FFFF !important;
+        box-shadow: 0 0 30px rgba(0, 255, 255, 0.5),
+                    0 0 60px rgba(255, 0, 255, 0.3),
+                    inset 0 0 20px rgba(0, 255, 255, 0.15) !important;
+    }
+    
+    /* Neon Input Fields */
+    .stTextInput > div > div > input,
+    .stTextArea > div > div > textarea,
+    .stSelectbox > div > div > select,
+    .stNumberInput > div > div > input {
+        background: #0A0E27 !important;
+        border: 2px solid #FF00FF !important;
+        color: #FFFFFF !important;
+        transition: all 0.2s ease !important;
+    }
+    
+    .stTextInput > div > div > input:focus,
+    .stTextArea > div > div > textarea:focus,
+    .stSelectbox > div > div > select:focus,
+    .stNumberInput > div > div > input:focus {
+        border-color: #00FFFF !important;
+        box-shadow: 0 0 15px rgba(0, 255, 255, 0.7),
+                    0 0 30px rgba(255, 0, 255, 0.4) !important;
+    }
+    
+    /* Neon Buttons */
+    .stButton > button {
+        border: 2px solid #FF00FF !important;
+        background: rgba(255, 0, 255, 0.1) !important;
+        color: #00FFFF !important;
+        font-weight: 600 !important;
+        transition: all 0.3s ease !important;
+    }
+    
+    .stButton > button:hover {
+        background: rgba(0, 255, 255, 0.1) !important;
+        border-color: #00FFFF !important;
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.6),
+                    0 0 40px rgba(255, 0, 255, 0.3) !important;
+        transform: translateY(-2px) !important;
+    }
+    
+    /* Neon Expanders */
+    .streamlit-expanderHeader {
+        background: #1A1F3A !important;
+        border: 1px solid #FF00FF !important;
+        border-radius: var(--radius-md) !important;
+        color: #00FFFF !important;
+    }
+    
+    /* Neon Tab highlights */
+    .stTabs [data-baseweb="tab-list"] button[aria-selected="true"] {
+        color: #00FFFF !important;
+        border-bottom: 3px solid #00FFFF !important;
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.5) !important;
     }
     """
 
@@ -467,16 +630,26 @@ def inject_css(theme_mode: str = "light") -> str:
     Generate complete CSS for injection
     
     Args:
-        theme_mode: "light" or "dark"
+        theme_mode: "light", "dark", "glassmorphism", or "neon"
         
     Returns:
         Complete CSS string
     """
-    theme = LIGHT_THEME if theme_mode == "light" else DARK_THEME
+    if theme_mode == "glassmorphism":
+        theme = GLASSMORPHISM_THEME
+        glass_css = get_glassmorphism_css()
+    elif theme_mode == "neon":
+        theme = NEON_THEME
+        glass_css = get_neon_css()
+    else:
+        theme = LIGHT_THEME if theme_mode == "light" else DARK_THEME
+        glass_css = ""
+    
     return f"""
     <style>
     {get_theme_css(theme)}
     {get_base_css()}
     {get_component_css()}
+    {glass_css}
     </style>
     """

@@ -34,6 +34,10 @@ def initialize_theme() -> None:
 
     # Store in session
     st.session_state.current_theme = actual_theme
+    
+    # Add theme indicator to help with debugging
+    if actual_theme in ["glassmorphism", "neon"]:
+        st.session_state.premium_theme = True
 
 
 def render_sidebar() -> None:

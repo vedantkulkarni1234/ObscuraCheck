@@ -80,10 +80,11 @@ def render_settings() -> None:
         settings = settings_manager.load()
         current_theme = settings.get("theme", "auto")
 
+        theme_options = ["auto", "light", "dark", "glassmorphism", "neon"]
         theme = st.selectbox(
             "Theme Mode",
-            options=["auto", "light", "dark"],
-            index=["auto", "light", "dark"].index(current_theme),
+            options=theme_options,
+            index=theme_options.index(current_theme) if current_theme in theme_options else 0,
         )
 
         if theme != current_theme:
@@ -93,6 +94,27 @@ def render_settings() -> None:
 
             time.sleep(0.5)
             st.rerun()
+
+        st.markdown("---")
+
+        st.subheader("✨ Theme Descriptions")
+        col1, col2 = st.columns(2)
+
+        with col1:
+            st.markdown("""
+            **🌀 Auto** - System theme
+            
+            **☀️ Light** - Clean bright interface
+            
+            **🌙 Dark** - Easy on the eyes
+            """)
+
+        with col2:
+            st.markdown("""
+            **💎 Glassmorphism** - Frosted glass aesthetic with animated gradients and cyan glow effects
+            
+            **⚡ Neon** - High-contrast cyberpunk style with neon glows and vibrant accents
+            """)
 
         st.divider()
 
